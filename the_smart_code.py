@@ -131,15 +131,34 @@ with pyautogui.hold('command'):
 for _ in range(16):
     pyautogui.press('down')
 
-for _ in range(2):
-    pyautogui.press('tab')
 
-pyautogui.write('<link rel="stylesheet" href="styles.css">')
+# o python não consegue escrever html, resolver isso 
+pyautogui.write('<link href="styles.css">')
+
+# pyautogui.press('tab')
+# pyautogui.press('<')
+# pyautogui.write('link')
+# pyautogui.press('space')
+# pyautogui.press('r')
+# pyautogui.press('e')
+# pyautogui.press('l')
+# # pyautogui.write('rel')
+# pyautogui.press('=')
+# pyautogui.press('"')
+# pyautogui.write('stylesheet')
+# pyautogui.press('"')
+# pyautogui.press('space')
+# pyautogui.write('href')
+# pyautogui.press('=')
+# pyautogui.press('"')
+# pyautogui.write('styles.css')
+# pyautogui.press('"')
+# pyautogui.press('>')
 
 
 ## ------------
 
-# time.sleep(5)
+time.sleep(5)
 
 # print(pyautogui.position())
 
