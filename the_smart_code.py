@@ -87,7 +87,7 @@ time.sleep(3)
 # criar arquivo css
 pyautogui.click(x=123, y=127)
 
-pyautogui.write("stylesheet.css")
+pyautogui.write("styles.css")
 pyautogui.press('enter')
 
 with pyautogui.hold('command'):
@@ -98,20 +98,50 @@ pyautogui.write("chrome")
 pyautogui.press('enter')
 pyautogui.rightClick(x=157, y=511)
 pyautogui.click(x=193, y=867)
-# pyautogui.click(x=1120, y=225)
 time.sleep(3)
 
-# função de selecionar o texto funciona perfeitamente
-# É preciso ajustar as posições e tempo
+# selecionar o texto do css
 pyautogui.moveTo(1120, 225)
+pyautogui.mouseDown(button='left')
+pyautogui.moveTo(1350, 896, duration=2)
+# time.sleep(195)
+pyautogui.mouseUp(button='left')
 
-pyautogui.dragTo(1277, 225, button='left', duration=5)
+with pyautogui.hold('command'):
+        pyautogui.press('c')
+
+with pyautogui.hold('command'):
+        pyautogui.press('space')
+
+pyautogui.write("visual studio code")
+pyautogui.press('enter')
+
+pyautogui.click(x=737, y=609)
+
+with pyautogui.hold('command'):
+        pyautogui.press('v')
+
+pyautogui.click(x=121, y=175)
+time.sleep(1)
+pyautogui.click(x=737, y=609)
+
+with pyautogui.hold('command'):
+        pyautogui.press('up')
+
+for _ in range(16):
+    pyautogui.press('down')
+
+for _ in range(2):
+    pyautogui.press('tab')
+
+pyautogui.write('<link rel="stylesheet" href="styles.css">')
+
 
 ## ------------
 
-time.sleep(5)
+# time.sleep(5)
 
-print(pyautogui.position())
+# print(pyautogui.position())
 
 with pyautogui.hold('command'):
         pyautogui.press('space')
