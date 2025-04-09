@@ -18,6 +18,7 @@ with pyautogui.hold('command'):
 pyautogui.write("terminal")
 pyautogui.press('enter')
 
+time.sleep(1)
 pyautogui.write("cd")
 pyautogui.press('enter')
 
@@ -26,7 +27,7 @@ pyautogui.press('enter')
 
 pyautogui.write("mkdir smart_site")
 pyautogui.press('enter')
-time.sleep(3)
+# time.sleep(3)
 
 pyautogui.write("cd smart_site")
 pyautogui.press('enter')
@@ -87,7 +88,7 @@ time.sleep(3)
 # criar arquivo css
 pyautogui.click(x=123, y=127)
 
-pyautogui.write("styles.css")
+pyautogui.write("sty.css")
 pyautogui.press('enter')
 
 with pyautogui.hold('command'):
@@ -104,7 +105,7 @@ time.sleep(3)
 pyautogui.moveTo(1120, 225)
 pyautogui.mouseDown(button='left')
 pyautogui.moveTo(1350, 896, duration=2)
-# time.sleep(195)
+time.sleep(195)
 pyautogui.mouseUp(button='left')
 
 with pyautogui.hold('command'):
@@ -121,25 +122,50 @@ pyautogui.click(x=737, y=609)
 with pyautogui.hold('command'):
         pyautogui.press('v')
 
+time.sleep(5)
+
 pyautogui.click(x=121, y=175)
 time.sleep(1)
 pyautogui.click(x=737, y=609)
 
+# conectar o css no html
+# o python não consegue escrever html, resolver isso
+pyautogui.write('link')
+pyautogui.press('tab')
+pyautogui.write("sty.css")
+
+pyautogui.click(x=743, y=862)
+
+# iniciar um servidor
+pyautogui.write("serve")
+pyautogui.press('enter')
+
 with pyautogui.hold('command'):
-        pyautogui.press('up')
+        pyautogui.press('space')
 
-for _ in range(16):
-    pyautogui.press('down')
+pyautogui.write("chrome")
+pyautogui.press('enter')
 
-for _ in range(2):
-    pyautogui.press('tab')
+with pyautogui.hold('command'):
+        pyautogui.press('t')
 
-pyautogui.write('<link rel="stylesheet" href="styles.css">')
+# abrir o localhost
+pyautogui.write("localhost:8000")
+pyautogui.press('enter')
+
+pyautogui.click(x=70, y=204)
+time.sleep(5)
+
+with pyautogui.hold('command'):
+        pyautogui.press('t')
+
+pyautogui.write("how can I fix CSS")
+pyautogui.press('enter')
 
 
 ## ------------
 
-# time.sleep(5)
+time.sleep(5)
 
 # print(pyautogui.position())
 
@@ -147,22 +173,3 @@ with pyautogui.hold('command'):
         pyautogui.press('space')
 
 pyautogui.write("ola mundo")
-
-
-# conectar o css no html
-
-
-# iniciar um servidor
-
-# abrir o localhost
-
-## ------------
-
-# time.sleep(5)
-
-# print(pyautogui.position())
-
-# with pyautogui.hold('command'):
-#         pyautogui.press('space')
-
-# pyautogui.write("ola mundo")
